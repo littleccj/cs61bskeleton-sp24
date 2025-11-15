@@ -44,7 +44,10 @@ public class JavaExercises {
       *    - Continue this process until n is 1
       */
     public static List<Integer> hailstone(int n) {
+
         return hailstoneHelper(n, new ArrayList<>());
+        //List<Integer> list=new ArrayList<>();
+        //rerurn hailstoneHelper(n, list);
     }
 
     private static List<Integer> hailstoneHelper(int x, List<Integer> list) {
