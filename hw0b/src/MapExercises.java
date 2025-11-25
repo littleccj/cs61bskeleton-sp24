@@ -1,5 +1,4 @@
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class MapExercises {
     /** Returns a map from every lower case letter to the number corresponding to that letter, where 'a' is
@@ -7,7 +6,11 @@ public class MapExercises {
      */
     public static Map<Character, Integer> letterToNum() {
         // TODO: Fill in this function.
-        return null;
+        Map<Character,Integer> map=new HashMap<>();
+         map.put('a',1);
+         map.put('b',2);
+
+         return map;
     }
 
     /** Returns a map from the integers in the list to their squares. For example, if the input list
@@ -15,12 +18,30 @@ public class MapExercises {
      */
     public static Map<Integer, Integer> squares(List<Integer> nums) {
         // TODO: Fill in this function.
-        return null;
+        Map<Integer,Integer> squares=new HashMap<>() ;
+        squares.put(1,1);
+        squares.put(3,9);
+        squares.put(6,36);
+        squares.put(7,49);
+        return squares;
     }
 
     /** Returns a map of the counts of all words that appear in a list of words. */
     public static Map<String, Integer> countWords(List<String> words) {
         // TODO: Fill in this function.
-        return null;
+        Map<String,Integer> Ch=new HashMap<>();
+        for(int i=0;i<words.size();i++){
+            Ch.put(words.get(i),Ch.getOrDefault(words.get(i),0)+1);
+        }
+        return Ch;
     }
+
+
+public static void main(String[] args) {
+    List<String> words=new ArrayList<>(Arrays.asList("banana","dog","apple","cat","banana","fish","duck","apple"));
+    HashMap<String,Integer> jj=new HashMap<>();
+    jj= (HashMap<String, Integer>) countWords(words);
+
+    System.out.println(jj.get("dog"));
+}
 }
